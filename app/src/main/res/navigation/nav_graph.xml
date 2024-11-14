@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/birinci_fragment">
+
+    <fragment
+        android:id="@+id/birinci_fragment"
+        android:name="com.example.fragmentvenavigation.birinci_fragment"
+        android:label="fragment_birinci_fragment"
+        tools:layout="@layout/fragment_birinci_fragment" >
+        <action
+            android:id="@+id/action_birinci_fragment_to_ikinci_fragment"
+            app:destination="@id/ikinci_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ikinci_fragment"
+        android:name="com.example.fragmentvenavigation.Ikinci_fragment"
+        android:label="fragment_ikinci_fragment"
+        tools:layout="@layout/fragment_ikinci_fragment" >
+        <argument
+            android:name="kullaniciismi"
+            app:argType="string" />
+    </fragment>
+</navigation>
